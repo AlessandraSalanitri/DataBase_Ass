@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>ChocoLux</title>
+    <%- include('layouts/header'); -%>
+
+</head>
+
+<body class="sub_page">
+
+    <div class="main_body_content">
+
+        <div class="hero_area">
+            <!-- header section strats -->
+            <%- include('layouts/navbar'); -%>
+                <!-- end header section -->
+        </div>
+
+        <!-- chocolate section -->
+
+        <section class="chocolate_section layout_padding">
+            <div class="container">
+                <div class="heading_container">
+                    <h2>
+                        Our chocolate products
+                    </h2>
+                    <p>
+                        Many desktop publishing packages and web pagend web page editors now use Lorem Ipsum as their
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="chocolate_container">
+                    <% for(var i=0; i < productItems.length; i++) { %>
+                        <div class="box">
+                            <div class="img-box">
+                                <img src=<%=productItems[i].path %> alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h6>
+                                    <span>
+                                        <%=productItems[i].name %>
+                                    </span>
+                                </h6>
+                                <h5>
+                                    <%=productItems[i].price %>
+                                </h5>
+                                <a href="">
+                                    <button>Add to your basket</button>
+                                </a>
+                            </div>
+                            <form action=<%="/productItem/delete/" +productItems[i]._id %> method ="GET">
+                                <button type="submit"> Delete </button>
+                            </form>
+                            <form action=<%="/updateproductForm/" +productItems[i]._id %> method ="GET">
+                                <button type="submit"> Update </button>
+                            </form>
+                        </div>
+                        <% } %>
+                </div>
+            </div>
+        </section>
+
+        <!-- end chocolate section -->
+
+        <!-- info section -->
+        
+        <%- include('layouts/info'); -%>
+        <!-- end info_section -->
+
+    </div>
+
+    <!-- footer section -->
+    <%- include('layouts/footer'); -%>
+    <!-- footer section -->
+
+    <%- include('layouts/script'); -%>
+
+</body>
+
+</html>

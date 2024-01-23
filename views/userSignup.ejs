@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChocoLux</title>
+  <%- include('layouts/header'); -%>
+    <!--This code is stored in layout folder, saved as header file-->
+</head>
+<body class="sub_page">
+  <div class="main_body_content">
+    <div class="hero_area">
+      <!-- header section/ navigation bar strats -->
+      <%- include('layouts/navbar'); -%>
+        <!--This code is stored in layout folder, saved as navbar file-->
+        <!-- end header section -->
+    </div>
+    <!-- user signup section -->
+    <section class="contact_section layout_padding">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5 col-lg-4 offset-md-1 offset-lg-2">
+            <div class="form_container">
+              <div class="heading_container">
+                <h2>
+                  Create a new account!
+                </h2>
+              </div>
+              <form action="/registerUser" method="post">
+                <div>
+                  <input type="text" id="email" name="email" placeholder="email" />
+                </div>
+                <div>
+                  <input type="text" id="username" name="username" placeholder="username" />
+                </div>
+                <div>
+                  <input type="password" id="password" name="password" placeholder="password" />
+                </div>
+                <div class="d-flex ">
+                  <button>
+                    Create Account!
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+  </div>
+  </section>
+  <!-- end contact section -->
+
+  <!-- info section -->
+  <%- include('layouts/info'); -%>
+    <!--This code is stored in layout folder, saved as info file-->
+    <!-- end info_section -->
+
+    <!-- footer section -->
+    <%- include('layouts/footer'); -%>
+      <!--This code is stored in layout folder, saved as footer file-->
+      <!-- footer section -->
+
+      <!-- jQery -->
+      <%- include('layouts/script'); -%>
+        <!--This code is stored in layout folder, saved as script file-->
+</body>
+</html>

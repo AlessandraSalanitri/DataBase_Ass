@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ChocoLux</title>
+  <%- include('layouts/header'); -%>
+  <!--This code is stored in layout folder, saved as header file-->
+</head>
+
+<body class="sub_page">
+
+  <div class="main_body_content">
+
+    <div class="hero_area">
+      <!-- header section strats -->
+      <%- include('layouts/navbar'); -%>
+      <!--This code is stored in layout folder, saved as navbar file-->
+      <!-- end header section -->
+    </div>
+
+    <!-- about section -->
+    <section class="about_section layout_padding ">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About Our Company
+              </h2>
+            </div>
+            <p>
+              Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable 
+            <a href="/chocolate">
+              <span>
+                Discover More
+              </span>
+              <img src="images/color-arrow.png" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/about-img.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- end about section -->
+
+
+    <!-- info section -->
+    <%- include('layouts/info'); -%>
+    <!--This code is stored in layout folder, saved as info file-->
+    <!-- end info_section -->
+
+  </div>
+
+  <!-- footer section -->
+  <%- include('layouts/footer'); -%>
+  <!--This code is stored in layout folder, saved as footer file--> 
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <%- include('layouts/script'); -%>
+  <!--This code is stored in layout folder, saved as script file-->
+
+</body>
+
+</html>
