@@ -69,7 +69,7 @@ global.loggedIn= null;
 
 app.use('*', (req, res, next) => {
     loggedIn = req.session.userId;
-    console.log(loggedIn)
+    //console.log(loggedIn)
     next()
 })
 
